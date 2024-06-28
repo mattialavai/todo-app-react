@@ -1,0 +1,660 @@
+body, html {
+  font-family: Arial, sans-serif;
+  background-color: #f0f2f5;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.header {
+  width: 100%;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+  background-color: #f0f2f5;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  padding: 10px;
+  font-size: 16px;
+  color: white;
+  background-color: #081cd1;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #333;
+  color: #fff;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.nav-links a:hover {
+  background-color: #555;
+}
+
+.get-started-link {
+  background-color:#081cd1;
+  color: #fff;
+}
+
+.get-started-link:hover {
+  background-color: #081cd1;
+}
+
+
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.todo-item span {
+  flex: 1;
+}
+
+.todo-item button {
+  margin-left: 10px;
+}
+
+.done {
+  text-decoration: line-through;
+  color: gray;
+}
+
+/* dashboard */
+.dashboard-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.header-section img {
+  max-width: 50%;
+  height: auto;
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+  border: none;
+}
+
+.header-section h2 {
+  margin-top: 1rem;
+}
+
+.header-section p {
+  margin-top: 0.5rem;
+  margin-bottom: 4.5rem;
+}
+
+.get-started-button {
+  background-color: #081cd1;
+  color: white;
+  padding: .75rem 1.5rem;
+  font-size: 1rem;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+  margin-top: 5.5rem; /* Add space between the paragraph and button */
+}
+
+.get-started-button:hover {
+  background-color: #007bff;
+}
+
+ 
+/* Signup page*/
+.signup-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.signup-container h2 {
+  margin-bottom: 1rem;
+}
+
+.signup-container p {
+  margin-bottom: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"],
+.form-group input[type="file"] {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.image-preview-container {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.image-preview {
+  margin-top: 1rem;
+  max-width: 30%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.file-upload-container {
+  display: flex;
+  align-items: center;
+}
+
+.remove-image-button {
+  background-color: #dc3545;
+  color: white;
+  padding: 0.1rem 0.2rem; 
+  font-size: 0.6rem; 
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display:block; /* Ensure it is displayed as a block element */
+  width: fit-content; /* Adjust width to fit content */
+}
+
+.remove-image-button:hover {
+  background-color: #c82333;
+}
+
+button[type="submit"] {
+  background-color: #081cd1;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  margin-top: 3.0rem;
+  font-size: 1rem;
+  text-decoration: none;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.login-link {
+  margin-top: 1rem;
+}
+
+
+/* Login */
+/* Container for the entire login section */
+.login-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Header style */
+.login-container h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Image container style */
+.image-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+/* Welcome image style */
+.welcome-image {
+  width: 500px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+/* Form style */
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Input fields style */
+.login-form input {
+  padding: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+/* Forgot password link style */
+.forgot-password {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.forgot-password a {
+  font-size: 14px;
+  color: #081cd1;
+}
+
+/* Login button style */
+.login-button {
+  padding: 10px;
+  background-color: #081cd1;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.login-button:hover {
+  background-color: #0056b3;
+}
+
+/* Signup link style */
+.login-container .signup-link {
+  margin-top: 10px;
+}
+
+.login-container .signup-link p {
+  font-size: 14px;
+  color: #0a0a0a;
+}
+
+.login-container .signup-link a {
+  color: #0056b3;
+  text-decoration: none;
+}
+
+.login-container .signup-link a:hover {
+  text-decoration: underline;
+}
+
+/* styles/forgot-password.css */
+
+.forgot-password-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.forgot-password-container h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.forgot-password-container p {
+  margin-bottom: 20px;
+}
+
+.forgot-password-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.forgot-password-container input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.forgot-password-container button {
+  padding: 10px;
+  background-color: #081cd1;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.forgot-password-container button:hover {
+  background-color: #0056b3;
+}
+
+/* todo page */
+/* src/components/Todo.css */
+
+.todo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.user-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.profile-image {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.clock {
+  margin: 20px 0;
+}
+
+.clock-face {
+  width: 200px;
+  height: 200px;
+  border: 10px solid black;
+  border-radius: 50%;
+  position: relative;
+  background: white;
+}
+
+.clock-label {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2em;
+  transform: translateY(-10%);
+}
+
+.clock-label span {
+  position: absolute;
+  top: 5%;
+  transform-origin: center;
+}
+
+.hand {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: center top;
+  transition: all 0.05s cubic-bezier(0.1, 2.7, 0.58, 1);
+}
+
+.hour-hand {
+  width: 4px;
+  height: 40px;
+  background-color: black;
+}
+
+.minute-hand {
+  width: 3px;
+  height: 65px;
+  background-color: rgb(17, 102, 172);
+}
+
+.second-hand {
+  width: 2px;
+  height: 80px;
+  background-color: rgb(182, 112, 7);
+}
+
+h2 {
+  margin: 10px 0;
+}
+
+h1 {
+  margin: 20px 0;
+}
+
+/* Responsive */
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 992px) {
+  .logo {
+    font-size: 1.2rem; /* Decrease font size for logo on medium screens */
+  }
+
+  .header-section h2 {
+    font-size: 1.5rem; /* Decrease font size for heading on medium screens */
+  }
+
+  .button-section .get-started-button {
+    font-size: 0.9rem; /* Decrease font size for button on medium screens */
+    padding: 8px 16px; /* Adjust padding for button on medium screens */
+  }
+
+  /* signup page */
+  .signup-container {
+    padding: 15px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="file"],
+  button {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+
+  /* login page */
+  .login-container {
+    padding: 15px;
+  }
+
+  .login-form input[type="email"],
+  .login-form input[type="password"],
+  .login-form button {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+
+  /* Todo page */
+  .todo-container {
+    padding: 15px;
+  }
+
+  .clock-face {
+    width: 150px;
+    height: 150px;
+  }
+
+  .clock-label {
+    font-size: 0.8rem;
+  }
+
+  .add-task input[type="text"],
+  .add-task button {
+    padding: 6px;
+    font-size: 0.9rem;
+  }
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: row; /* Stack items vertically on smaller screens */
+    padding: 10px;
+  }
+
+  .logo {
+    font-size: 1.1rem; /* Further decrease font size for logo on smaller screens */
+    margin-bottom: 10px; /* Add spacing below logo */
+  }
+
+  .nav-links {
+    flex-direction: row; /* Stack links vertically */
+  }
+
+  .nav-links a {
+    margin: 5px 0; /* Adjust spacing between links */
+    font-size: 0.9rem; /* Decrease font size for links on smaller screens */
+  }
+
+  .header-section h2 {
+    font-size: 1.3rem; /* Further decrease font size for heading on smaller screens */
+  }
+
+  .button-section .get-started-button {
+    font-size: 1.5rem; /* Further decrease font size for button on smaller screens */
+    padding: 6px 12px; /* Further adjust padding for button on smaller screens */
+  }
+
+  /* signup page */
+  .signup-container {
+    padding: 10px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="file"],
+  button {
+    font-size: 0.9rem;
+    padding: 6px;
+  }
+
+  /* login page */
+  .login-container {
+    padding: 10px;
+  }
+
+  .login-form input[type="email"],
+  .login-form input[type="password"],
+  .login-form button {
+    font-size: 0.8rem;
+    padding: 6px;
+  }
+
+/* Todo page */
+.todo-container {
+  padding: 10px;
+}
+
+.profile-image {
+  max-width: 100px;
+}
+
+.clock-face {
+  width: 120px;
+  height: 120px;
+}
+
+.second-hand {
+  width: 1px;
+  height: 55px;
+  background-color: rgb(182, 112, 7);
+}
+
+.hour-hand {
+  width: 4px;
+  height: 30px;
+  background-color: black;
+}
+
+.minute-hand {
+  width: 3px;
+  height: 45px;
+  background-color: rgb(17, 102, 172);
+}
+
+.clock-label {
+  font-size: 0.7rem;
+}
+
+.hand {
+  width: 4px; /* Adjusted width for smaller screens */
+}
+
+.tasks li {
+  padding: 6px;
+}
+
+.add-task input[type="text"],
+.add-task button {
+  padding: 5px;
+  font-size: 0.8rem;
+}
+}
