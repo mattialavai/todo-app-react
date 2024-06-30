@@ -398,9 +398,9 @@ button[type="submit"]:hover {
   background-color: #0056b3;
 }
 
-/* todo page */
-/* src/components/Todo.css */
 
+/* src/components/Todo.css */
+/* Container */
 .todo-container {
   display: flex;
   flex-direction: column;
@@ -408,6 +408,7 @@ button[type="submit"]:hover {
   margin-top: 20px;
 }
 
+/* User Profile */
 .user-profile {
   display: flex;
   flex-direction: column;
@@ -422,6 +423,7 @@ button[type="submit"]:hover {
   object-fit: cover;
 }
 
+/* Clock */
 .clock {
   margin: 20px 0;
 }
@@ -478,6 +480,7 @@ button[type="submit"]:hover {
   background-color: rgb(182, 112, 7);
 }
 
+/* Headings */
 h2 {
   margin: 10px 0;
 }
@@ -485,6 +488,101 @@ h2 {
 h1 {
   margin: 20px 0;
 }
+
+/* Tasks */
+.tasks {
+  width: 100%;
+  max-width: 600px;
+  margin: 20px 0;
+  background: gray;
+  border: solid 2px;
+  border-radius: 5px;
+}
+
+/* Todo Form */
+.TodoForm {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto; /* Center align the form */
+}
+
+.form-group {
+  display: flex;
+  align-items: baseline; /* Stretch items vertically */
+}
+
+.todo-input {
+  flex: 1; /* Grow to fill remaining space */
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px 0 0 5px;
+}
+
+.todo-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+button[type="submit"] {
+  background-color: #081cd1;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  margin-top: 3.0rem;
+  font-size: 0.6rem;
+  text-decoration: none;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.Todo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px; /* Adjust as needed */
+  width: 100%;
+}
+
+.todo-text {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.todo-text p,
+.todo-text input {
+    margin: 0;
+    padding: 5px; /* Adjust as needed */
+    flex-grow: 1; /* Ensures the text/input takes available space */
+}
+
+.icon-container {
+    display: flex;
+    gap: 10px; /* Adjust spacing between icons */
+    margin-left: 10px;
+    padding-right: 10px;
+
+}
+
+.edit-form {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.edit-form input {
+    flex-grow: 1;
+    padding: 5px; /* Adjust as needed */
+}
+
+
 
 /* Responsive */
 
