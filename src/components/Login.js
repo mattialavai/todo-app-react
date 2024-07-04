@@ -1,18 +1,23 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-// import '../styles/login.css'; // Import the CSS file for styling
-import welcomeImage from '../images/undraw_To_do_list.png'; // Import your image
+import { UserContext } from './UserContext';
+import welcomeImage from '../images/undraw_To_do_list.png';
 
 const Login = () => {
   const navigate = useNavigate();
+  const { setUser } = useContext(UserContext);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
   const handleLogin = (e) => {
     e.preventDefault();
-    // Handle login logic here (e.g., form validation, API call)
-    // For simplicity, just navigate to the todo page
-    navigate('/todo');
+    const user = JSON.parse(localStorage.getItem(email));
+    if (user && user.password === password) {
+      setUser({ name: user.name, email: user.email, profileImage: user.profileImage });
+      navigate('/todo');
+    } else {
+      alert('Invalid email or password');
+    }
   };
 
   return (

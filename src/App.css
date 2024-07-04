@@ -1,3 +1,4 @@
+/* General Styles */
 body, html {
   font-family: Arial, sans-serif;
   background-color: #f0f2f5;
@@ -6,6 +7,7 @@ body, html {
   width: 100%;
   height: 100%;
   display: flex;
+  box-sizing: border-box;
   flex-direction: column;
 }
 
@@ -45,7 +47,7 @@ form {
   gap: 10px;
 }
 
-input {
+input, button {
   padding: 10px;
   font-size: 16px;
   border: 1px solid #ccc;
@@ -53,13 +55,11 @@ input {
 }
 
 button {
-  padding: 10px;
-  font-size: 16px;
   color: white;
   background-color: #081cd1;
   border: none;
-  border-radius: 4px;
   cursor: pointer;
+  transition: background-color 0.3s;
 }
 
 button:hover {
@@ -98,42 +98,24 @@ button:hover {
 }
 
 .get-started-link {
-  background-color:#081cd1;
+  background-color: #081cd1;
   color: #fff;
+  padding: .75rem 1.5rem;
+  font-size: 1rem;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s;
 }
 
 .get-started-link:hover {
-  background-color: #081cd1;
+  background-color: #007bff;
 }
 
-
-.todo-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  margin-bottom: 10px;
-}
-
-.todo-item span {
-  flex: 1;
-}
-
-.todo-item button {
-  margin-left: 10px;
-}
-
-.done {
-  text-decoration: line-through;
-  color: gray;
-}
-
-/* dashboard */
+/* Dashboard */
 .dashboard-container {
-  max-width: 600px;
-  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 20px;
   text-align: center;
 }
@@ -143,7 +125,6 @@ button:hover {
   height: auto;
   margin-top: 5rem;
   margin-bottom: 2rem;
-  border: none;
 }
 
 .header-section h2 {
@@ -163,28 +144,19 @@ button:hover {
   text-decoration: none;
   border-radius: 8px;
   transition: background-color 0.3s;
-  margin-top: 5.5rem; /* Add space between the paragraph and button */
+  margin-top: 5.5rem;
 }
 
 .get-started-button:hover {
   background-color: #007bff;
 }
 
- 
-/* Signup page*/
+/* Signup page */
 .signup-container {
   max-width: 400px;
   margin: 0 auto;
   padding: 20px;
   text-align: center;
-}
-
-.signup-container h2 {
-  margin-bottom: 1rem;
-}
-
-.signup-container p {
-  margin-bottom: 1.5rem;
 }
 
 .form-group {
@@ -204,7 +176,6 @@ button:hover {
   width: 100%;
   padding: 0.5rem;
   margin-bottom: 0.5rem;
-  border: 1px solid #ccc;
   border-radius: 4px;
 }
 
@@ -220,22 +191,17 @@ button:hover {
   border-radius: 4px;
 }
 
-.file-upload-container {
-  display: flex;
-  align-items: center;
-}
-
 .remove-image-button {
   background-color: #dc3545;
   color: white;
-  padding: 0.1rem 0.2rem; 
-  font-size: 0.6rem; 
+  padding: 0.1rem 0.2rem;
+  font-size: 0.6rem;
   border: none;
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s;
-  display:block; /* Ensure it is displayed as a block element */
-  width: fit-content; /* Adjust width to fit content */
+  display: block;
+  width: fit-content;
 }
 
 .remove-image-button:hover {
@@ -247,9 +213,9 @@ button[type="submit"] {
   color: white;
   padding: 0.75rem 1.5rem;
   margin-top: 3.0rem;
-  font-size: 1rem;
+  font-size: 1.5rem;
   text-decoration: none;
-  border-radius: 4px;
+  border-radius: 5px;
   border: none;
   cursor: pointer;
   transition: background-color 0.3s;
@@ -263,9 +229,7 @@ button[type="submit"]:hover {
   margin-top: 1rem;
 }
 
-
-/* Login */
-/* Container for the entire login section */
+/* Login page */
 .login-container {
   max-width: 400px;
   margin: 0 auto;
@@ -273,33 +237,28 @@ button[type="submit"]:hover {
   text-align: center;
 }
 
-/* Header style */
 .login-container h2 {
   font-size: 24px;
   margin-bottom: 20px;
 }
 
-/* Image container style */
 .image-container {
   display: flex;
   justify-content: center;
   margin-bottom: 20px;
 }
 
-/* Welcome image style */
 .welcome-image {
   width: 500px;
   height: 200px;
   border-radius: 50%;
 }
 
-/* Form style */
 .login-form {
   display: flex;
   flex-direction: column;
 }
 
-/* Input fields style */
 .login-form input {
   padding: 10px;
   margin-bottom: 10px;
@@ -309,7 +268,6 @@ button[type="submit"]:hover {
   box-sizing: border-box;
 }
 
-/* Forgot password link style */
 .forgot-password {
   text-align: center;
   margin-bottom: 10px;
@@ -320,7 +278,6 @@ button[type="submit"]:hover {
   color: #081cd1;
 }
 
-/* Login button style */
 .login-button {
   padding: 10px;
   background-color: #081cd1;
@@ -334,7 +291,6 @@ button[type="submit"]:hover {
   background-color: #0056b3;
 }
 
-/* Signup link style */
 .login-container .signup-link {
   margin-top: 10px;
 }
@@ -353,8 +309,7 @@ button[type="submit"]:hover {
   text-decoration: underline;
 }
 
-/* styles/forgot-password.css */
-
+/* Forgot password page */
 .forgot-password-container {
   max-width: 400px;
   margin: 0 auto;
@@ -397,7 +352,6 @@ button[type="submit"]:hover {
 .forgot-password-container button:hover {
   background-color: #0056b3;
 }
-
 
 /* src/components/Todo.css */
 /* Container */
@@ -582,177 +536,72 @@ button[type="submit"] {
     padding: 5px; /* Adjust as needed */
 }
 
+/* Footer */
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
 
+/* Responsive Design */
+@media only screen and (max-width: 768px) {
+  .header-section img {
+      max-width: 80%;
+  }
 
-/* Responsive */
+  .get-started-button {
+      margin-top: 3rem;
+  }
 
-/* Media queries for responsiveness */
-@media screen and (max-width: 992px) {
-  .logo {
-    font-size: 1.2rem; /* Decrease font size for logo on medium screens */
+  .signup-container,
+  .login-container,
+  .forgot-password-container {
+      max-width: 90%;
+  }
+
+  .dashboard-container {
+      padding: 10px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .header-section img {
+      max-width: 100%;
   }
 
   .header-section h2 {
-    font-size: 1.5rem; /* Decrease font size for heading on medium screens */
+      font-size: 1.5rem;
   }
 
-  .button-section .get-started-button {
-    font-size: 0.9rem; /* Decrease font size for button on medium screens */
-    padding: 8px 16px; /* Adjust padding for button on medium screens */
+  .header-section p {
+      font-size: 0.9rem;
   }
 
-  /* signup page */
-  .signup-container {
-    padding: 15px;
+  .get-started-button {
+      margin-top: 2.5rem;
   }
 
-  input[type="text"],
-  input[type="email"],
-  input[type="password"],
-  input[type="file"],
-  button {
-    font-size: 0.9rem;
-    padding: 8px;
-  }
-
-  /* login page */
-  .login-container {
-    padding: 15px;
-  }
-
-  .login-form input[type="email"],
-  .login-form input[type="password"],
-  .login-form button {
-    font-size: 0.9rem;
-    padding: 8px;
-  }
-
-  /* Todo page */
-  .todo-container {
-    padding: 15px;
-  }
-
-  .clock-face {
-    width: 150px;
-    height: 150px;
-  }
-
-  .clock-label {
-    font-size: 0.8rem;
-  }
-
-  .add-task input[type="text"],
-  .add-task button {
-    padding: 6px;
-    font-size: 0.9rem;
+  .signup-container,
+  .login-container,
+  .forgot-password-container {
+      padding: 10px;
   }
 }
 
-
-
-
-@media screen and (max-width: 768px) {
-  .navbar {
-    flex-direction: row; /* Stack items vertically on smaller screens */
-    padding: 10px;
-  }
-
-  .logo {
-    font-size: 1.1rem; /* Further decrease font size for logo on smaller screens */
-    margin-bottom: 10px; /* Add spacing below logo */
-  }
-
-  .nav-links {
-    flex-direction: row; /* Stack links vertically */
-  }
-
-  .nav-links a {
-    margin: 5px 0; /* Adjust spacing between links */
-    font-size: 0.9rem; /* Decrease font size for links on smaller screens */
-  }
-
+@media only screen and (max-width: 360px) {
   .header-section h2 {
-    font-size: 1.3rem; /* Further decrease font size for heading on smaller screens */
+      font-size: 1.2rem;
   }
 
-  .button-section .get-started-button {
-    font-size: 1.5rem; /* Further decrease font size for button on smaller screens */
-    padding: 6px 12px; /* Further adjust padding for button on smaller screens */
+  .header-section p {
+      font-size: 0.8rem;
   }
 
-  /* signup page */
-  .signup-container {
-    padding: 10px;
+  .get-started-button {
+      margin-top: 2rem;
   }
-
-  input[type="text"],
-  input[type="email"],
-  input[type="password"],
-  input[type="file"],
-  button {
-    font-size: 0.9rem;
-    padding: 6px;
-  }
-
-  /* login page */
-  .login-container {
-    padding: 10px;
-  }
-
-  .login-form input[type="email"],
-  .login-form input[type="password"],
-  .login-form button {
-    font-size: 0.8rem;
-    padding: 6px;
-  }
-
-/* Todo page */
-.todo-container {
-  padding: 10px;
-}
-
-.profile-image {
-  max-width: 100px;
-}
-
-.clock-face {
-  width: 120px;
-  height: 120px;
-}
-
-.second-hand {
-  width: 1px;
-  height: 55px;
-  background-color: rgb(182, 112, 7);
-}
-
-.hour-hand {
-  width: 4px;
-  height: 30px;
-  background-color: black;
-}
-
-.minute-hand {
-  width: 3px;
-  height: 45px;
-  background-color: rgb(17, 102, 172);
-}
-
-.clock-label {
-  font-size: 0.7rem;
-}
-
-.hand {
-  width: 4px; /* Adjusted width for smaller screens */
-}
-
-.tasks li {
-  padding: 6px;
-}
-
-.add-task input[type="text"],
-.add-task button {
-  padding: 5px;
-  font-size: 0.8rem;
-}
 }

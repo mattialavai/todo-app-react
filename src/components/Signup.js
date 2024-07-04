@@ -1,7 +1,6 @@
 import React, { useState, useRef, useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { UserContext } from './UserContext';
-// import './Signup.css'; // Import the CSS file for styling
 
 const Signup = () => {
     const navigate = useNavigate();
@@ -10,13 +9,19 @@ const Signup = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
-    const [profileImage, setProfileImage] = useState(''); // State for profile image
+    const [profileImage, setProfileImage] = useState('');
     const fileInputRef = useRef(null);
 
     const handleSignup = (e) => {
         e.preventDefault();
-        // Store the user data in context
-        setUser({ name, profileImage }); // Store profileImage after form submission
+        if (password !== confirmPassword) {
+            alert("Passwords do not match");
+            return;
+        }
+
+        const user = { name, email, password, profileImage };
+        localStorage.setItem(email, JSON.stringify(user));
+        setUser({ name, email, profileImage });
         navigate('/todo');
     };
 
@@ -32,7 +37,7 @@ const Signup = () => {
     const handleRemoveImage = () => {
         setProfileImage('');
         if (fileInputRef.current) {
-            fileInputRef.current.value = ''; // Reset the file input value
+            fileInputRef.current.value = '';
         }
     };
 
@@ -61,7 +66,7 @@ const Signup = () => {
                     <label htmlFor="profileImage">Upload Profile Image:</label>
                     <input type="file" id="profileImage" ref={fileInputRef} onChange={handleImageChange} />
                 </div>
-                {profileImage && ( // Only show the remove button if profileImage is set
+                {profileImage && (
                     <button type="button" onClick={handleRemoveImage} className="remove-image-button">Remove Image</button>
                 )}
                 <button type="submit">Signup</button>
@@ -74,3 +79,4 @@ const Signup = () => {
 };
 
 export default Signup;
+
