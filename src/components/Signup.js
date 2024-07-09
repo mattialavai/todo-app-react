@@ -19,16 +19,16 @@ const Signup = () => {
             return;
         }
 
-        const user = { name, email, password, profileImage };
-        localStorage.setItem(email, JSON.stringify(user));
-        setUser({ name, email, profileImage });
+        const user = { name, email, password, profileImage }; // Include profileImage in user object
+        localStorage.setItem(email, JSON.stringify(user)); // Store user information in localStorage
+        setUser({ name, email, profileImage }); // Set user context
         navigate('/todo');
     };
 
     const handleImageChange = (e) => {
         const file = e.target.files[0];
         if (file) {
-            setProfileImage(URL.createObjectURL(file));
+            setProfileImage(URL.createObjectURL(file)); // Set profile image from file input
         } else {
             setProfileImage('');
         }
@@ -79,4 +79,3 @@ const Signup = () => {
 };
 
 export default Signup;
-
