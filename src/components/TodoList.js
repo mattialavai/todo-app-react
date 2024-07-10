@@ -150,6 +150,12 @@ const TodoList = () => {
     const minuteDegrees = minute * 6;
     const secondDegrees = second * 6;
 
+    useEffect(() => {
+        document.querySelector('.hour').style.transform = `rotate(${hourDegrees}deg)`;
+        document.querySelector('.minute').style.transform = `rotate(${minuteDegrees}deg)`;
+        document.querySelector('.second').style.transform = `rotate(${secondDegrees}deg)`;
+    }, [hourDegrees, minuteDegrees, secondDegrees]);
+
     return (
         <div className="todo-container">
             <div className="user-profile">
@@ -161,16 +167,18 @@ const TodoList = () => {
                 <h2>Welcome back, {name}!</h2>
             </div>
             <div className="clock">
-                <div className="clock-face">
-                    {[...Array(12).keys()].map((num) => (
-                        <div key={num} className="clock-label" style={{ transform: `rotate(${num * 30}deg)` }}>
-                            <span style={{ transform: `rotate(-${num * 30}deg)` }}>{num === 0 ? 12 : num}</span>
-                        </div>
-                    ))}
-                    <div className="hand hour-hand" style={{ transform: `rotate(${hourDegrees}deg)` }}></div>
-                    <div className="hand minute-hand" style={{ transform: `rotate(${minuteDegrees}deg)` }}></div>
-                    <div className="hand second-hand" style={{ transform: `rotate(${secondDegrees}deg)` }}></div>
+                <div className="numbers">
+                    <div className="twelve">12</div>
+                    <div className="three">3</div>
+                    <div className="six">6</div>
+                    <div className="nine">9</div>
                 </div>
+                <div className="arrows">
+                    <div className="hour"></div>
+                    <div className="minute"></div>
+                    <div className="second"></div>
+                </div>
+                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/9/95/Rolex_logo.svg/1200px-Rolex_logo.svg.png" alt="rolex-logo" />
             </div>
             <div className="greeting">
                 <p style={{ marginLeft: '20px' }}>Good {hour < 12 ? 'Morning' : hour < 18 ? 'Afternoon' : 'Evening'}, {name}!</p>

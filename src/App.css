@@ -252,11 +252,13 @@ button[type="submit"]:hover {
   width: 500px;
   height: 200px;
   border-radius: 50%;
+  margin-top: 60px;
 }
 
 .login-form {
   display: flex;
   flex-direction: column;
+  margin-top: 150px;
 }
 
 .login-form input {
@@ -375,68 +377,111 @@ button[type="submit"]:hover {
   width: 100px;
   height: 100px;
   object-fit: cover;
+  margin-top: 40px;
 }
 
 /* Clock */
-.clock {
-  margin: 20px 0;
-}
-
-.clock-face {
-  width: 200px;
-  height: 200px;
-  border: 10px solid black;
-  border-radius: 50%;
-  position: relative;
-  background: white;
-}
-
-.clock-label {
+img {
+  width: 70px;
   position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 60px;
+  z-index: 2;
+}
+
+.clock {
+  position: relative;
+  background-color: lightgray;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  border: 5px solid darkgray;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+}
+
+.numbers div {
+  position: absolute;
+  font-size: 27px;
+  font-weight: bold;
+  color: lightgoldenrodyellow;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+.twelve {
+  top: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.three {
+  right: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.six {
+  bottom: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.nine {
+  left: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.arrows {
+  display: flex;
   width: 100%;
   height: 100%;
-  display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.2em;
-  transform: translateY(-10%);
 }
 
-.clock-label span {
+.arrows::before {
+  content: "";
+  width: 25px;
+  height: 25px;
+  background-color: darkgreen;
+  border-radius: 50%;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+  z-index: 4;
+}
+
+.arrows div {
+  background-color: white;
+  width: 7px;
   position: absolute;
-  top: 5%;
-  transform-origin: center;
+  height: 120px;
+  transform-origin: bottom center;
+  bottom: 50%;
+  z-index: 3;
+  border-radius: 50% 50% 0 0;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+  margin-top: 20px;
 }
 
-.hand {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform-origin: center top;
-  transition: all 0.05s cubic-bezier(0.1, 2.7, 0.58, 1);
-}
-
-.hour-hand {
-  width: 4px;
-  height: 40px;
-  background-color: black;
-}
-
-.minute-hand {
-  width: 3px;
+.arrows .hour {
   height: 65px;
-  background-color: rgb(17, 102, 172);
+  transform: rotate(30deg);
 }
 
-.second-hand {
-  width: 2px;
-  height: 80px;
-  background-color: rgb(182, 112, 7);
+.arrows .second {
+  height: 100px;
+  transform: rotate(250deg);
+  background-color: goldenrod;
 }
-
+.arrows .minute {
+  height: 90px;
+  transform: rotate(250deg);
+  
+}
 /* Headings */
 h2 {
   margin: 10px 0;
+  margin-top: 110px;
 }
 
 h1 {
