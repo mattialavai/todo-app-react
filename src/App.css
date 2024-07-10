@@ -111,45 +111,67 @@ button:hover {
   background-color: #007bff;
 }
 
-/* Dashboard */
+/* Dashboard.css */
+
 .dashboard-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
   text-align: center;
+  padding: 20px;
 }
 
-.header-section img {
-  max-width: 50%;
-  height: auto;
-  margin-top: 5rem;
-  margin-bottom: 2rem;
+.header-section {
+  margin-bottom: 30px;
 }
 
 .header-section h2 {
-  margin-top: 1rem;
+  font-size: 2rem;
+  margin-bottom: 10px;
 }
 
 .header-section p {
-  margin-top: 0.5rem;
-  margin-bottom: 4.5rem;
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.image-section {
+  margin-top: 200px; /* Move this section further down the page */
+}
+
+.image-section img {
+  width: 50%;
+  max-width: 300px;
+  height: auto;
+  margin-top: 300px;
+}
+
+.button-section {
+  margin-top: 120px; /* Move the button further down */
 }
 
 .get-started-button {
   background-color: #081cd1;
   color: white;
-  padding: .75rem 1.5rem;
+  padding: 10px 20px;
   font-size: 1rem;
+  border: none;
+  border-radius: 5px;
   text-decoration: none;
-  border-radius: 8px;
-  transition: background-color 0.3s;
-  margin-top: 5.5rem;
+  transition: background-color 0.3s ease;
+}
+
+.get-started-button {
+  margin-top: 2.5rem;
+  font-size: 20px;
 }
 
 .get-started-button:hover {
   background-color: #007bff;
 }
+
+
 
 /* Signup page */
 .signup-container {
