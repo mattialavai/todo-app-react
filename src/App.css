@@ -400,7 +400,8 @@ button[type="submit"]:hover {
   width: 100px;
   height: 100px;
   object-fit: cover;
-  margin-top: 40px;
+  margin-top: 70px;
+  margin-bottom: 50px;
 }
 
 /* Clock */
