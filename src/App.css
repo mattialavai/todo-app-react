@@ -239,6 +239,7 @@ button[type="submit"]:hover {
 
 .login-container h2 {
   font-size: 24px;
+  margin-top: 0px;
   margin-bottom: 20px;
 }
 
@@ -252,13 +253,13 @@ button[type="submit"]:hover {
   width: 500px;
   height: 200px;
   border-radius: 50%;
-  margin-top: 60px;
+  margin-top: 100px;
 }
 
 .login-form {
   display: flex;
   flex-direction: column;
-  margin-top: 150px;
+  margin-top: 200px;
 }
 
 .login-form input {
@@ -386,15 +387,15 @@ img {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  top: 60px;
+  top: 40px;
   z-index: 2;
 }
 
 .clock {
   position: relative;
   background-color: lightgray;
-  width: 250px;
-  height: 250px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   border: 5px solid darkgray;
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
@@ -464,17 +465,17 @@ img {
 }
 
 .arrows .hour {
-  height: 65px;
+  height: 50px;
   transform: rotate(30deg);
 }
 
 .arrows .second {
-  height: 100px;
+  height: 80px;
   transform: rotate(250deg);
   background-color: goldenrod;
 }
 .arrows .minute {
-  height: 90px;
+  height: 65px;
   transform: rotate(250deg);
   
 }
