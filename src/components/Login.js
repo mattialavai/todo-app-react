@@ -14,6 +14,7 @@ const Login = () => {
     const user = JSON.parse(localStorage.getItem(email));
     if (user && user.password === password) {
       setUser({ name: user.name, email: user.email, profileImage: user.profileImage });
+      localStorage.setItem('currentUser', JSON.stringify({ name: user.name, email: user.email, profileImage: user.profileImage })); // Store current user
       navigate('/todo');
     } else {
       alert('Invalid email or password');
